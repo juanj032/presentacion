@@ -1,0 +1,19 @@
+#menu a {
+    text-decoration: none;
+    color: blue;
+}
+a:visited {
+    background;
+}
+ul {
+    list-style: none;
+}
+.selected {
+    background: yellow;
+}
+.container {
+    font-size: 25px;
+    line-height: 45px;
+    width: 255px;
+    margin: 0 auto;
+}
