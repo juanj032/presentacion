@@ -16,6 +16,11 @@ Router.map(function() {
   
   this.route('postPage', {
       path: '/posts/:_id',
+      
+      waitOn: function() {
+        return Meteor.subscribe('comments', this.params._id);
+      },
+      
       data: function  () {
         return Posts.findOne({_id:this.params._id});
       }
