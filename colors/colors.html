@@ -1,0 +1,36 @@
+<head>
+  <title>Leaderboard</title>
+</head>
+
+<body>
+  <div id="outer">
+    {{> colors}}
+  </div>
+</body>
+
+<template name="colors">
+  <div class="colors">
+    {{#each colors}}
+      {{> color}}
+    {{/each}}
+  </div>
+
+  {{#if selected_color}}
+  <div class="details">
+    <div class="name">{{selected_color}}</div>
+    <input type="button" class="inc" value="Give 5 points" />
+  </div>
+  {{/if}}
+
+  {{#unless selected_color}}
+  <div class="none">Click a color to select</div>
+  {{/unless}}
+</template>
+
+<template name="color">
+  <div class="color {{selected}} {{class}}">
+    <span class="name">{{name}}</span>
+    <span class="score">{{score}}</span>
+  </div>
+</template>
+
