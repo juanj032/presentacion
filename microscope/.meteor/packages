@@ -11,4 +11,4 @@ iron-router
 spin
 accounts-password
 accounts-facebook
-accounts-ui
+accounts-base
