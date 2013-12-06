@@ -1,0 +1,22 @@
+<head>
+  <title>New way</title>
+</head>
+
+<body>
+  <div class="container">
+    {{> menu}}
+  </div>
+</body>
+
+<template name="menu">
+     <ul id="menu">
+      {{#each items}}
+        {{> menu_item}}
+      {{/each}}
+    </ul>
+    <div id="selected-label">Selected: {{selectedItem}}</div>
+</template>
+
+<template name="menu_item">
+  <li><a href="#" class="{{itemClass}}">{{this}}</a></li>
+</template>
