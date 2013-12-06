@@ -13,6 +13,13 @@ Router.map(function() {
         return Posts.findOne({_id:this.params._id});
       }
     });
+  
+  this.route('postEdit', {
+    path: '/posts/:_id/edit',
+    data: function() { 
+      return Posts.findOne(this.params._id); 
+    }
+  });
 
   this.route('postSubmit', {
     path: '/submit'
